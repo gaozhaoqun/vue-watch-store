@@ -8,10 +8,12 @@
 module.exports = {
   publicPath: './',
   devServer: {
-    open: true,
+    open: false,
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     proxy: {
       '/api': {
-        // target: 'http://localhost:3000/', // 本地后端地址
+        // target: 'http://0.0.0.0:8080/', // 本地后端地址
         target: 'http://106.15.179.105:3000/', // 线上后端地址
         changeOrigin: true, //允许跨域
         pathRewrite: {

@@ -11,7 +11,7 @@
     <div class="block">
       <el-carousel height="460px">
         <el-carousel-item v-for="item in carousel" :key="item.carousel_id">
-          <img style="height:460px;" :src="$target + item.imgPath" :alt="item.describes" />
+          <img style="height:460px;" :src="$target + item.imgPath" :alt="$target" />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -159,9 +159,9 @@ export default {
   },
   created() {
     // 获取轮播图数据
-    this.$axios
-      .post("/api/resources/carousel", {})
-      .then(res => {
+    this.$axios.post("/api/resources/carousel", {}).then(res => {
+    // this.$axios.get("/mock/homebanner.json", {}).then(res => {
+        console.log(res)
         this.carousel = res.data.carousel;
       })
       .catch(err => {

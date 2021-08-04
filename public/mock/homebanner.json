@@ -1,0 +1,15 @@
+{
+  "code": "001",
+  "carousel": [
+    {
+      "carousel_id": "1",
+      "imgPath": "/imgs/iwc-01.jpg",
+      "describes": "123456"
+    },
+    {
+      "carousel_id": "2",
+      "imgPath": "/imgs/iwc-02.jpg",
+      "describes": "123456"
+    }
+  ]
+}
